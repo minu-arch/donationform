@@ -5,7 +5,7 @@ interface HatchHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 export function HatchHeader({ children, className, ...props }: HatchHeaderProps) {
     return (
         <div
-            className="w-full sm:w-1/2"
+            className={`w-full sm:w-1/2 ${className || ''}`}
             {...props}
         >
             {children}

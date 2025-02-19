@@ -11,7 +11,7 @@ const DonationTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<
         return (
             <h1
                 ref={ref}
-                className="text-4xl font-bold text-[#1B3B36] mb-2"
+                className={`text-4xl font-bold text-[#1B3B36] mb-2 ${className || ''}`}
                 {...props}
             >
                 {children}
@@ -27,7 +27,7 @@ const DonationSubtitle = React.forwardRef<HTMLParagraphElement, React.HTMLAttrib
         return (
             <p
                 ref={ref}
-                className="text-xl text-[#4d7972] mb-8"
+                className={`text-xl text-[#4d7972] mb-8 ${className || ''}`}
                 {...props}
             >
                 {children}
@@ -43,7 +43,7 @@ const DonationTypeSelector = React.forwardRef<HTMLDivElement, DonationCardProps>
         return (
             <div
                 ref={ref}
-                className="flex gap-4 justify-center mb-6"
+                className={`flex gap-4 justify-center mb-6 ${className || ''}`}
                 {...props}
             >
                 {children}
@@ -59,7 +59,7 @@ const DonationAmountSelector = React.forwardRef<HTMLDivElement, DonationCardProp
         return (
             <div
                 ref={ref}
-                className="flex gap-2 mb-8 justify-center"
+                className={`flex gap-2 mb-8 justify-center ${className || ''}`}
                 {...props}
             >
                 {children}
@@ -75,7 +75,7 @@ const DonationSubmit = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttri
         return (
             <button
                 ref={ref}
-                className="bg-[#FDB813] text-[#1B3B36] rounded-full py-3 mb-8 font-semibold sm:max-w-[368px] sm:h-[64px] w-full h-[48px] self-center"
+                className={`bg-[#FDB813] text-[#1B3B36] rounded-full py-3 mb-8 font-semibold sm:max-w-[368px] sm:h-[64px] w-full h-[48px] self-center ${className || ''}`}
                 {...props}
             >
                 {children}
@@ -91,7 +91,7 @@ const DonationPaymentMethods = React.forwardRef<HTMLDivElement, DonationCardProp
         return (
             <div
                 ref={ref}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                className={`flex flex-col sm:flex-row items-center justify-center gap-4 ${className || ''}`}
                 {...props}
             >
                 {children}
@@ -102,10 +102,6 @@ const DonationPaymentMethods = React.forwardRef<HTMLDivElement, DonationCardProp
 DonationPaymentMethods.displayName = "DonationPaymentMethods"
 
 export {
-    DonationTitle,
-    DonationSubtitle,
-    DonationTypeSelector,
-    DonationAmountSelector,
-    DonationSubmit,
-    DonationPaymentMethods
+    DonationAmountSelector, DonationPaymentMethods, DonationSubmit, DonationSubtitle, DonationTitle, DonationTypeSelector
 }
+
